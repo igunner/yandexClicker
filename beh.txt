@@ -1,0 +1,67 @@
+OpenUrl https://youtube.com
+GetAllLinks tagName a
+SelectVisibleRandomLink
+ScrollElem 0 -200
+Pause 1 3
+MouseMoveToElement  1000
+Pause 1 2
+ClickElement
+
+OpenUrl https://yandex.ru
+Pause 1 2
+InputText name text %%KEYWORD%%
+Pause 5 8
+PushButton cssSelector .suggest2-form__button
+Pause 10 12
+
+While
+GetAllLinks tagName a https://mySite.com/
+SelectVisibleRandomLink
+Break
+Pause 1 2
+ScrollDecl 7 9
+Pause 1 2
+NextPage tagName a &p=
+Pause 1 2
+ScrollDecl 12 3
+End
+
+ScrollElem 0 -200
+Pause 1 3
+MouseMoveToElement  1000
+Pause 1 2
+ClickElement
+
+Pause 5 3
+SwitchWindow
+MouseMoveRandom 1000
+Pause 1 3
+MouseMoveRandom 1000
+ScrollDecl 10 9
+GetAllLinks tagName a https://mySite.com/
+SelectVisibleRandomLink
+ScrollElem 0 -200
+MouseMoveToElement  2000
+Pause 1 2
+ClickElement
+
+Pause 1 3
+ScrollDecl 7 9
+GetAllLinks tagName a https://mySite.com/
+SelectVisibleRandomLink
+ScrollElem 0 -200
+MouseMoveToElement  1500
+Pause 1 2
+ClickElement
+
+Pause 1 3
+ScrollDecl 10 8
+GetAllLinks tagName a https://mySite.com/
+SelectVisibleRandomLink
+ScrollElem 0 -200
+MouseMoveToElement  1000
+Pause 1 2
+ClickElement
+
+Pause 1 3
+Quit
